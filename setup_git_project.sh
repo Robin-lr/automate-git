@@ -7,7 +7,7 @@ if [ -z "$1" ]; then
 fi
 
 PROJECT_NAME=$1
-PROJECT_PATH="$HOME/Documents/${PROJECT_NAME}"
+PROJECT_PATH="$HOME/Documents/projects/${PROJECT_NAME}"
 
 # Create project folder
 mkdir "$PROJECT_PATH"
