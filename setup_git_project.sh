@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Here, Add your actual credentials
+PAT="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"
+USERNAME="Robin-lr"
 # Check if a project name was provided
 if [ -z "$1" ]; then
 	echo " ❌ Usage: ./setup_git_project.sh <project-name>"
@@ -24,11 +27,10 @@ git add .
 git commit -m "Initial commit"
 
 # Create a new repo on GitHub
-PAT="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"
-curl -u "robin-lr:$PAT" https://api.github.com/user/repos -d "{\"name\":\"$PROJECT_NAME\", \"private\":true}"
+curl -u "$USERNAME:$PAT" https://api.github.com/user/repos -d "{\"name\":\"$PROJECT_NAME\", \"private\":true}"
 
 # Add GitHub remote
-git remote add origin git@github.com:Robin-lr/$PROJECT_NAME.git
+git remote add origin git@github.com:$USERNAME/$PROJECT_NAME.git
 
 # Push to GitHub
 git branch -M main
