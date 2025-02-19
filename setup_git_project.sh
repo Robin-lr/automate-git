@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Here, Add your actual credentials
-PAT="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"
-USERNAME="Robin-lr"
+PAT=""
+USERNAME=""
 # Check if a project name was provided
 if [ -z "$1" ]; then
 	echo " ❌ Usage: ./setup_git_project.sh <project-name>"
